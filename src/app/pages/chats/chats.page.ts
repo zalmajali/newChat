@@ -172,8 +172,8 @@ public dbInstance!: SQLiteObject;
   playAudio() {
      alert(JSON.stringify(this.mediaFile));
     if (!this.mediaFile) {
-      alert('https://livechat.taqnyat.sa/uploadFile/teqW360/1256303402127472.ogg');
-      this.mediaFile = this.mediaPlugin.create('https://livechat.taqnyat.sa/uploadFile/teqW360/1256303402127472.ogg');
+      alert('https://dev.taqnyat.sa/my-sound.mp3');
+      this.mediaFile = this.mediaPlugin.create('https://dev.taqnyat.sa/my-sound.mp3');
       this.mediaFile.onStatusUpdate.subscribe(status => console.log('حالة الصوت:', status));
     }
 
