@@ -171,8 +171,9 @@ public dbInstance!: SQLiteObject;
   }
   playAudio() {
     if (!this.mediaFile) {
-            this.mediaFile = this.mediaPlugin.create('https://livechat.taqnyat.sa/uploadFile/teqW360/1256303402127472.ogg');
-
+      alert(JSON.stringify(this.mediaFile));
+      alert('https://livechat.taqnyat.sa/uploadFile/teqW360/1256303402127472.ogg');
+      this.mediaFile = this.mediaPlugin.create('https://livechat.taqnyat.sa/uploadFile/teqW360/1256303402127472.ogg');
       this.mediaFile.onStatusUpdate.subscribe(status => console.log('حالة الصوت:', status));
     }
 
@@ -209,7 +210,7 @@ public dbInstance!: SQLiteObject;
           if (position !== undefined && position >= 0) {
             this.audioPosition = position;
           }
-        }).catch(error => console.error("خطأ في الحصول على موضع الصوت:", error));
+        }).catch(error => alert(JSON.stringify(error)));
       }
     }, 1000);
   }
