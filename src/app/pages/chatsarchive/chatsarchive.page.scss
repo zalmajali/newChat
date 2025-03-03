@@ -1,0 +1,311 @@
+ion-content{
+	--background:#ffffff !important;
+	background:#ffffff !important;
+	--keyboard-offset: 0 !important;
+    --overflow: hidden !important;
+}
+ion-toolbar{
+    background:#ffffff !important;
+    --background:#ffffff !important;
+}
+.imageLogo{
+	width:50px;
+}
+.colImage{
+    padding:0px;
+    text-align: start;
+}
+.colIcon{
+    padding:0px;
+    text-align: end;
+}
+.logoName{
+    display: inline-block;
+    vertical-align: top;
+    padding: 7px 10px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #214376;
+}
+.logoTitle{
+    font-size: 14px;
+    color: #8496B0;
+    padding-top: 5px;
+}
+.divIcon{
+    padding: 20px 7px;
+}
+.searchIcon{
+    font-size: 30px;
+    color: #214376;
+}
+.imageDiv{
+	padding: 5px 0px;
+}
+.formLoginDiv{
+	background: #EFF3F9;
+	height: 100%;
+    overflow-y: auto;
+    padding-bottom: 130px;
+}
+.chat-list {
+    flex-direction: column-reverse;
+    height: 99%;
+    overflow: auto;
+    padding-right: 12px;
+    padding-left: 15px;
+  }
+  //footer
+.footer{
+  padding-bottom: 7px;
+    bottom:0px;
+    background: #EFF3F9;
+
+}
+.addContactLeft{
+    position: fixed;
+    bottom: 90px;
+    left: 15px;
+}
+.addContactRight{
+    position: fixed;
+    bottom: 90px;
+    right: 15px;
+}
+.adContactImage{
+	width:60px;
+}
+ion-textarea{
+  margin-left: 8px;
+  margin-right: 8px;
+  background: #ffffff;
+  color:#000000;
+  max-height: 100px;
+  overflow-y: auto;
+  resize: none;
+  box-sizing: border-box;
+  --placeholder-color:#b6b6b5;
+  --placeholder-opacity:1;
+}
+ion-textarea::part(native)::placeholder {
+  transform: translateY(10px); /* Move placeholder down */
+}
+.footerPad{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.spanIcon{
+    position: relative;
+    bottom: 11px;
+}
+.sendMsgRight{
+    border-radius: 50px;
+    margin-left: 55px;
+}
+.sendMsgLeft{
+    border-radius: 50px;
+    margin-right: 55px;
+}
+.selectDataToSendRight{
+    position: absolute;
+    bottom: -1px;
+    left: 0px;
+    z-index: 100;
+    padding-left: 5px;
+    padding-right: 5px;
+} 
+.selectDataToSendLeft{
+    position: absolute;
+    bottom: -1px;
+    right: 0px;
+    z-index: 100;
+    padding-left: 5px;
+    padding-right: 5px;
+} 
+.smileRight{
+    padding-right: 10px;width: 35px;
+}
+.smileLeft{
+    padding-left: 10px;width: 35px;
+}
+//box en
+.chat-boxUserLeft{
+    display: inline-block;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    background-color: #F48022;
+    color:#ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 20px 8px;
+    max-width: 75%;
+    line-height:20px;
+    font-size: 14px;
+  }
+  .chat-boxUserLeft:after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: -19px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent #F48022;
+  }
+  .chat-boxULeft{
+    text-align: -webkit-right;
+  }
+  .chat-boxsubortLeft { 
+    display: inline-block;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    background-color: #ffffff;
+    color:#214376;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 20px 8px;
+    max-width: 75%;
+    line-height:20px;
+    font-size: 14px;
+  }
+  .chat-boxsubortLeft:after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    border-width: 10px;
+    border-style: solid;
+    left: -19px;
+    border-color: transparent #ffffff transparent transparent;
+  }
+  .chat-boxSLeft{
+    text-align: -webkit-left;
+  }
+//box ar
+.chat-boxUserRight {
+    display: inline-block;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    background-color: #F48022;
+    color:#ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 35px 8px;
+    max-width: 250px;
+  }
+  .chat-boxUserRight:after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: -19px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #F48022 transparent transparent;
+  }
+  .chat-boxURight{
+    text-align: -webkit-left;
+  }
+  .chat-boxsubortRight { 
+    display: inline-block;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    background-color: #ffffff;
+    color:#214376;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 35px 8px;
+    max-width: 250px;
+  }
+  .chat-boxsubortRight:after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    border-width: 10px;
+    border-style: solid;
+    right: -19px;
+    border-color: transparent transparent transparent #ffffff;
+  }
+  .chat-boxSRight{
+    text-align: -webkit-right;
+  }
+    emoji-picker {
+    width: 100%;
+    height: 350px;
+    --background: #EFF3F9;
+    --border-color:#EFF3F9;
+  }
+  .timeChatFirst{
+    text-align: end;
+    margin-top: 5px;
+    font-size: 12px;
+  }
+  .timeChatLast{
+    text-align: end;
+    margin-top: 5px;
+    font-size: 12px;
+  }
+  .checkicons{
+    font-size: 18px;
+    vertical-align: text-top;
+    color:#c8cdd8;
+  }
+  .checkiconsRead{
+    font-size: 18px;
+    color:#214376;
+    vertical-align: text-top;
+  }
+  .checkiconsDenied{
+    font-size: 18px;
+    color:red;
+    vertical-align: text-top;
+  }
+  .countMsg{
+    width: 22px;
+    height: 22px;
+    padding-top: 5px;
+    background-color: #F48022;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 100%;
+}
+.imageToButtom{
+  width: 24px;
+    background: #ffffff;
+    border-radius: 100%;
+    padding: 3px;
+}
+.popoverMen{
+  position: relative;
+  text-align: start;
+  padding-inline-start: 15px;
+  padding-top: 7px;
+  padding-bottom: 13px;
+  color: #214376;
+  font-size: 15px;
+}
+.listClass{
+	border-bottom-left-radius: 20px; 
+  border-bottom-right-radius: 20px;
+}
+.poboverContent{
+  --background: transparent !important;
+    background: transparent !important;
+}
+.spanMenueLeft{
+  position: absolute;
+  left: 8px;
+  padding-top: 1px;
+}
+.spanMenueRight{
+  position: absolute;
+  right: 8px;
+  padding-top: 1px;
+}
+.arrowMenue{
+  font-size: 15px;
+  color: #8496B0;
+}

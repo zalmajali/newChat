@@ -1,0 +1,154 @@
+ion-content{
+	--background:#EFF3F9 !important;
+	background:#EFF3F9 !important;
+	--keyboard-offset: 0 !important;
+}
+.formLoginDiv{
+	background: #ffffff;
+	height: 100%;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-top: 15px;
+}
+.loginDiv{
+	text-align: start;
+	font-size: 25px;
+	font-weight: bold;
+	color:#214376;
+	padding:25px 0px 10px 0px;
+}
+//form
+.buttonDiv{
+	text-align: center;
+	width: 100%;
+}
+.contactUs{
+	padding:30px 15px 15px 5px;
+	color:#8496B0
+}
+.link{
+	color:#8496B0;
+	text-decoration: none;
+}
+.title{
+    font-size: 19px; 
+    color:#214376;
+    font-weight: bold;
+}
+
+//footer
+.spanIcon{
+    vertical-align: middle;
+}
+.imageDiv{
+	padding: 25px 5px 5px 5px;
+}
+.imageLogo{
+	width:60px;
+}
+.infoDiv{
+	margin: 4px 60px;
+    padding-left: 13px;
+    padding-right: 12px;
+}
+.divName{
+	padding-top: 5px;
+	font-size: 16px;
+    font-weight: bold;
+    color: #213476;	
+}
+.divUserName{
+	padding-top: 10px;
+	font-size: 16px;
+    color: #8496B0;
+}
+.titleDiv{
+	padding-left: 15px;
+	padding-right: 15px;
+	color: #8496B0;
+}
+.titleIcon{
+	font-size: 25px;
+    color: #214376;
+}
+.arrowIcon{
+	font-size: 20px;
+    color: #214376;
+}
+.divLang{
+	background: #EFF3F9;
+    width: 100%;
+    height: 150px;
+    border-radius: 3px;
+}
+.langLabel{
+	padding:15px 25px;
+	color: #8496B0;
+}
+.contactUs{
+	padding:50px 15px 15px 5px;
+	color:#8496B0
+}
+.link{
+	color:#8496B0;
+	text-decoration: none;
+}
+.teamNameDiv{
+	padding-left: 15px;
+	padding-right: 15px;
+	color: #214376;
+	font-size: 15px;
+}
+.teamNameIcon{
+	font-size: 20px;
+    color: #F48022;
+}
+.buttonWight{
+	--background: #ffffff !important;
+	--background-activated:#ffffff !important;
+	--background-activated-opacity: #ffffff !important;
+	--color-activated: #8496B0 !important;
+	--color-focused: #ffffff !important;
+	--ripple-color: #ffffff !important;
+	--color-hover: #ffffff !important;
+	min-height: 45px;
+	--color:#8496B0 !important;
+	--background-focused:#8496B0 !important;
+	--background-hover:#8496B0 !important;
+	--border-radius:50px;
+}
+.buttonWidth{
+	width: 100%;
+}
+.teamLargDiv{
+	width: 95%;
+	background-color: #EFF3F9;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.boxTeam{
+	height: 0px;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+  }
+.showTeam {
+	opacity: 1;
+	transition: opacity 1s ease-in-out;
+	overflow-y: auto;
+	max-height: 200px;
+  }
+  .hidColor{
+	--background: transparent !important;
+	padding-left: 5px;
+	padding-right: 5px;
+  }
+.statusGreenIcon{
+	font-size: 20px;
+    color: #228B22;
+}
+.statusRedIcon{
+	font-size: 20px;
+    color: #FF3838;
+}

@@ -1,0 +1,32 @@
+<ion-content [fullscreen]="true">
+  <div class="imageDiv"><img src="../../assets/images/logoImage.png" class="imageLogo"></div>
+  <div class="formLoginDiv">
+    <div class="loginDiv">{{pageTitle}}</div>
+    <form style="display: contents;" (ngSubmit)="checkUser()">
+      <div class="margin_10">
+        <ion-item  class="{{errorMainUserName}}">
+            <ion-input type="text" label="{{main_user_name}}" [(ngModel)]="mainUserName" [ngModelOptions]="{standalone: true}" labelPlacement="floating" (ionInput)="checkMainUserName($event)"></ion-input>
+        </ion-item>
+        <div class="errorMessage" *ngIf="isErrorMainUserName == 0">{{main_user_name_error}}</div>
+      </div>
+      <div class="margin_10">
+        <ion-item  class="{{errorUserName}}">
+            <ion-input type="text" label="{{user_name}}" [(ngModel)]="userName" [ngModelOptions]="{standalone: true}" labelPlacement="floating" (ionInput)="checkUserName($event)"></ion-input>
+        </ion-item>
+        <div class="errorMessage" *ngIf="isErrorUserName == 0">{{user_name_error}}</div>
+      </div>
+      <div class="margin_10">
+        <ion-item  class="{{errorUserPassword}}">
+            <ion-input [type]="showPassword ? 'text' : 'password'" label="{{user_password}}" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" labelPlacement="floating" (ionInput)="checkPassword($event)"></ion-input>
+            <ion-icon slot="end" class="iconPass" [name]="showPassword ? 'eye' : 'eye-off'" (click)="changeInputType()"> </ion-icon>
+          </ion-item>
+        <div class="errorMessage" *ngIf="isErrorUserPassword == 0">{{user_Password_error}}</div>
+      </div>
+    <div class="buttonDiv">
+      <ion-button mode="ios" (click)="checkUser()">{{login_button}}</ion-button>
+    </div>
+    <button style="visibility:hidden" id="submit" ion-button type="submit" ></button>
+  </form>
+    <div class="contactUs">{{contact_label}} <span style="font-weight: bold;"><a href="https://taqnyat.sa/ar/contact/" target="_blank" class="link">{{contact_link}}</a></span></div>
+  </div>
+</ion-content>

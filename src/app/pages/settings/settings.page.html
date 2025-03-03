@@ -1,0 +1,99 @@
+<ion-content [fullscreen]="true">
+  <div style="padding: 15px 5px;">
+      <div class="title"><span class="spanIcon"><ion-icon name="{{arrow_back}}" style="font-size: 25px;color: #214376;" (click)="functionBackHome()"></ion-icon></span> {{settings}}</div>
+      <div class="imageDiv">
+        <div [ngStyle]="{'float': floatD}"><img src="../../assets/images/userImage.png" class="imageLogo"></div>
+        <div class="infoDiv">
+            <div class="divName">{{mainUserName}}</div>
+            <div class="divUserName">{{userName}}</div>
+        </div>
+      </div>
+  </div>
+  <div class="formLoginDiv">
+    <div class="margin_10">
+      <ion-item>
+         <ion-icon name="chatbox-ellipses-outline" class="titleIcon"></ion-icon>
+          <ion-label class="titleDiv">{{accept_chats}}</ion-label>
+          <ion-toggle [checked]="changeStatus" justify="end" mode="ios" (ionChange)="functionChangeStatus($event)"></ion-toggle>
+      </ion-item>
+    </div>
+    <div class="margin_10" (click)="functionToggleDiv()">
+      <ion-item [button]="true" >
+         <ion-icon name="people-outline" class="titleIcon"></ion-icon>
+          <ion-label class="titleDiv">{{team}}</ion-label>
+          <ion-icon class="arrowIcon" name="{{arrow_go}}"></ion-icon>
+      </ion-item>
+    </div>
+    <div class="margin_10" class="boxTeam" [ngClass]="{'showTeam': isVisible}" [ngStyle]="{'height': height}">
+        <div class="teamLargDiv">
+          <ion-item class="hidColor" lines="none" *ngFor="let items of returnTeamArray;let i=index">
+            <ion-icon name="people-outline" class="teamNameIcon"></ion-icon> 
+            <ion-label class="teamNameDiv">{{items.userName}}</ion-label>
+            <ion-icon class="statusGreenIcon" *ngIf="items.online == 1" name="radio-button-on-outline"></ion-icon>
+            <ion-icon class="statusRedIcon" *ngIf="items.online == 2" name="radio-button-on-outline"></ion-icon>
+          </ion-item>
+        </div>
+    </div>
+    <div class="margin_10">
+      <ion-item>
+         <ion-icon name="notifications-outline" class="titleIcon"></ion-icon>
+          <ion-label class="titleDiv">{{notifications}}</ion-label>
+          <ion-icon class="arrowIcon" name="{{arrow_go}}"></ion-icon>
+      </ion-item>
+    </div>
+    <div class="margin_10" (click)="functionSendEmail()">
+      <ion-item>
+         <ion-icon name="chatbubbles-outline" class="titleIcon"></ion-icon>
+          <ion-label class="titleDiv">{{live_chate_supports}}</ion-label>
+          <ion-icon class="arrowIcon" name="{{arrow_go}}"></ion-icon>
+      </ion-item>
+    </div>
+    <div class="margin_10" (click)="functionCheckForUpdate()">
+      <ion-item>
+         <ion-icon name="sync-outline" class="titleIcon"></ion-icon>
+          <ion-label class="titleDiv">{{check_for_update}}</ion-label>
+          <ion-icon class="arrowIcon" name="{{arrow_go}}"></ion-icon>
+      </ion-item>
+    </div>
+    <div class="margin_10" (click)="functionLogOut()">
+      <ion-item>
+         <ion-icon name="log-out-outline" class="titleIcon"></ion-icon>
+          <ion-label class="titleDiv">{{log_out}}</ion-label>
+          <ion-icon class="arrowIcon" name="{{arrow_go}}"></ion-icon>
+      </ion-item>
+    </div>
+    <div class="margin_10">
+      <div class="divLang">
+        <div class="langLabel">{{languageApp}}</div>
+        <div style="padding-left: 10px;padding-right: 10px;">
+          <ion-grid style="padding:0px">
+            <ion-row style="padding:0px" *ngIf="language=='en'">
+                <ion-col class="colImage">
+                  <div class="buttonDiv">
+                    <ion-button class="buttonWidth" mode="ios">English</ion-button>
+                  </div>
+                </ion-col>
+                <ion-col>
+                  <div class="buttonDiv" (click)="changeLange('ar')">
+                    <ion-button class="buttonWight buttonWidth" mode="ios">عربي</ion-button>
+                  </div>
+                </ion-col>
+            </ion-row>
+            <ion-row style="padding:0px" *ngIf="language=='ar'">
+              <ion-col class="colImage">
+                <div class="buttonDiv">
+                  <ion-button class="buttonWidth" mode="ios">عربي</ion-button>
+                </div>
+              </ion-col>
+              <ion-col>
+                <div class="buttonDiv" (click)="changeLange('en')">
+                  <ion-button class="buttonWight buttonWidth" mode="ios">English</ion-button>
+                </div>
+              </ion-col>
+          </ion-row>
+        </ion-grid>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

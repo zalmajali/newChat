@@ -1,0 +1,98 @@
+<ion-content [fullscreen]="true">
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <div>
+        <ion-grid style="padding:0px">
+          <ion-row style="padding:0px">
+              <ion-col class="colImage">
+                <div class="imageDiv"><img src="../../assets/images/logoImage.png" class="imageLogo"><div class="logoName">Taqnyat</div></div>
+              </ion-col>
+              <ion-col class="colIcon">
+                <div class="divIcon" (click)="toggleSearch()"><ion-icon name="search" class="searchIcon" ></ion-icon></div>
+              </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+     <div class="inputDiv search-container" [ngClass]="{ 'hidden': !showSearch,'visible':!showSearchs }" class="fade">
+      <ion-item>
+          <ion-input type="text" placeholder="{{search}}" fill="solid" mode='ios' (ionInput)="functionSearch($event)" [(ngModel)]="searchData"  [ngModelOptions]="{standalone: true}" ></ion-input>
+          <ion-icon slot="end" class="iconSearch" name="close-circle" *ngIf="showCloseSearch!=0" (click)="functionRemoveSearch()"> </ion-icon>
+      </ion-item>
+    </div>
+    </ion-toolbar>
+  </ion-header>
+    <div class="formLoginDiv">
+      <div class="largDiv" *ngIf="chatVal==1">
+        <div *ngIf = "searchType == 1">
+          <div class="infoDiv" *ngFor="let items of returnChatSearchArray;let i=index">
+            <div [ngStyle]="{'float': floatD}"><img src="../../assets/images/logoImage.png" class="imageLogo"></div>
+              <div (click)="functionChats(items.mobile,items.chatSessionId)">
+                <div class="diveNameInfo">
+                  <div class="divName">{{items.mobile}}</div>
+                  <div class="divNumber" *ngIf="items.badge!=0">{{items.countMsg}}</div>
+                  <div [ngClass]="{'numNewMsgRight': language=='ar', 'numNewMsgLeft': language!='ar'}" *ngIf="items.badge!=0"><div class="countMsg">{{items.badge}}</div></div>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div *ngIf = "searchType == 0">
+          <div class="infoDiv" *ngFor="let items of returnChatArray;let i=index">
+            <div [ngStyle]="{'float': floatD}"><img src="../../assets/images/logoImage.png" class="imageLogo"></div>
+              <div (click)="functionChats(items.mobile,items.chatSessionId)">
+                <div class="diveNameInfo">
+                  <div class="divName">{{items.mobile}}</div>
+                  <div class="divNumber" *ngIf="items.badge!=0">{{items.countMsg}}</div>
+                  <div [ngClass]="{'numNewMsgRight': language=='ar', 'numNewMsgLeft': language!='ar'}" *ngIf="items.badge!=0"><div class="countMsg">{{items.badge}}</div></div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="chatVal==0" class="largDiv">
+        <div class="noDataDiv">
+          <div><img src="../../assets/images/noData.png" style="width: 30%;"></div>
+          <div class="noDataText">{{noExisting}}</div>
+        </div>
+      </div>
+      <div style="position: relative;" (click)="functionContact()">
+        <div [ngClass]="{'addContactLeft': language=='ar', 'addContactRight': language!='ar'}">
+          <img src="../../assets/images/addContact.png" class="adContactImage">
+        </div>
+      </div>
+    </div>
+    <ion-footer class="ion-no-border footer">
+      <ion-header class="ion-no-border">
+          <div>
+            <ion-grid style="padding:0px">
+              <ion-row style="padding:0px">
+                  <ion-col size="3" style="text-align: center;">
+                    <div>
+                      <div><ion-icon name="chatbox-ellipses" (click)="functionHome()" class="footerIconUnselected"></ion-icon></div>
+                      <div class="footerText">{{menue_down_on}}</div>
+                    </div>
+                  </ion-col>
+                  <ion-col size="3" style="text-align: center;">
+                    <div>
+                      <div><ion-icon name="chatbubble-ellipses" class="footerIcon"></ion-icon></div>
+                      <div class="footerText">{{menue_down_tow}}</div>
+                      <div class="footerBorder"></div>
+                    </div>
+                  </ion-col>
+                  <ion-col size="3" style="text-align: center;" (click)="functionArchive()">
+                    <div>
+                      <div><ion-icon name="file-tray" class="footerIconUnselected"></ion-icon></div>
+                      <div class="footerText">{{menue_down_Three}}</div>
+                    </div>
+                  </ion-col>
+                  <ion-col size="3" style="text-align: center;" (click)="functionSetting()">
+                    <div>
+                      <div><ion-icon name="grid-outline" class="footerIconUnselected"></ion-icon></div>
+                      <div class="footerText">{{menue_down_four}}</div>
+                    </div>
+                  </ion-col>
+              </ion-row>
+          </ion-grid>
+        </div>
+      </ion-header>
+    </ion-footer>
+</ion-content>

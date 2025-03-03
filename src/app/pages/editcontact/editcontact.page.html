@@ -1,0 +1,66 @@
+<ion-content [fullscreen]="true">
+  <div style="padding: 15px 5px 30px 5px;">
+    <div class="title" (click)="functionBackContact()"><span class="spanIcon"><ion-icon name="{{arrow_back}}" style="font-size: 25px;color: #214376;"></ion-icon></span> {{add_contacts}}</div>
+  </div>
+  <div class="imageDiv"><img src="../../assets/images/logoImage.png" class="imageLogo"></div>
+  <div class="formLoginDiv">
+    <form style="display: contents;" (ngSubmit)="editPhoneNumber()">
+      <div class="margin_10">
+        <div>
+          <ion-item lines="none" style="direction: ltr;">
+           <ion-input type="text" class="addLineInput {{errorNumber}}" label="{{number_contact}}" (ionInput)="functionCheckNumber($event)" [(ngModel)]="number" [ngModelOptions]="{standalone: true}" labelPlacement="floating"></ion-input>
+          </ion-item>
+          <div class="errorMessage" *ngIf="isErrorNumber == 0">{{number_contact_error}}</div>
+        </div>
+      </div>
+      <div class="margin_10">
+        <ion-item >
+            <ion-input type="text" label="{{contact_name}}" [(ngModel)]="contactName" [ngModelOptions]="{standalone: true}" labelPlacement="floating"></ion-input>
+        </ion-item>
+      </div>
+      <div class="margin_10">
+        <ion-item >
+            <ion-input type="text" label="{{email_contact}}" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" labelPlacement="floating"></ion-input>
+        </ion-item>
+      </div>
+      <div class="margin_10">
+        <div class="tagTitle">{{tags}}</div>
+        <div>
+          <ion-grid style="padding:0px">
+            <ion-row style="padding:0px">
+                <ion-col size="4" style="text-align: start;padding:0px 5px" >
+                  <ion-item  class="tagItem">
+                    <ion-input class="tagInput" type="text" [(ngModel)]="tagOne" [ngModelOptions]="{standalone: true}"  ></ion-input>
+                </ion-item>
+                </ion-col>
+                <ion-col size="4" class="iconViwe" style="text-align: start;padding:0px 5px">
+                  <ion-item  class="tagItem">
+                    <ion-input class="tagInput" type="text"  [(ngModel)]="tagTow" [ngModelOptions]="{standalone: true}"  ></ion-input>
+                </ion-item>
+                </ion-col>
+                <ion-col size="4" class="iconViwe" style="text-align: start;padding:0px 5px">
+                  <ion-item  class="tagItem">
+                    <ion-input class="tagInput" type="text" [(ngModel)]="tagThree" [ngModelOptions]="{standalone: true}"  ></ion-input>
+                </ion-item>
+                </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+      </div>
+      <div class="margin_10">
+        <ion-item >
+            <ion-input type="text" label="{{contact_note}}" [(ngModel)]="contactNotes" [ngModelOptions]="{standalone: true}" labelPlacement="floating"></ion-input>
+        </ion-item>
+      </div>
+      <div class="margin_10">
+        <ion-item >
+            <ion-input type="text" label="{{contact_customer_id}}" [(ngModel)]="customerId" [ngModelOptions]="{standalone: true}" labelPlacement="floating"></ion-input>
+        </ion-item>
+      </div>
+      <div class="buttonDiv">
+        <ion-button mode="ios" (click)="editPhoneNumber()"><ion-icon name="add-outline" class="pluseIcon"></ion-icon>{{edit_number_butt}}</ion-button>
+      </div>
+    <button style="visibility:hidden" id="submit" ion-button type="submit" ></button>
+  </form>
+  </div>
+</ion-content>

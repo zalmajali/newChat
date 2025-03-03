@@ -1,0 +1,39 @@
+ion-content{
+    border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	--keyboard-offset: 0 !important;
+    --background:transparent;
+    --backdrop-opacity:0
+}
+.formLoginDiv{
+	background: #ffffff;
+	height: 25%;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	padding-right: 15px;
+	padding-left: 15px;
+    overflow-y: auto;
+	margin-top: auto;
+}
+.statusGreenIcon{
+	font-size: 20px;
+    color: #228B22;
+}
+.statusRedIcon{
+	font-size: 20px;
+    color: #FF3838;
+}
+.statusblouIcon{
+	font-size: 20px;
+    color: #8496B0;
+}
+.teamNameIcon{
+	font-size: 20px;
+    color: #F48022;
+}
+.teamNameDiv{
+	padding-left: 15px;
+	padding-right: 15px;
+	color: #214376;
+	font-size: 15px;
+}

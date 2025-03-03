@@ -1,0 +1,68 @@
+<div class="formLoginDiv">
+  <div>
+    <div style="text-align: start;padding:3px;" (click)="close()"><ion-icon name="close" style="font-size: 26px; color:#214376"></ion-icon></div>
+    <ion-grid style="padding:0px;" [ngStyle]="{'dir': dir}">
+      <ion-row style="padding:0px">
+          <ion-col style="text-align: start;padding: 20px 7px 0px 7px;">
+            <div class="titleDiv">
+              {{templates_list}}
+            </div>
+          </ion-col>
+          <ion-col class="selectColTempName">
+            <div>
+              <ion-select interface="popover" value="0" label=""  toggle-icon="chevron-down-outline" expanded-icon="chevron-up-outline" mode="ios" (ionChange)="selectTempName($event)">
+                <ion-select-option *ngFor="let items of returnTempForName;let i=index" value="{{i}}">{{items.name}}</ion-select-option>
+           </ion-select>
+          </div>
+          </ion-col>
+      </ion-row>
+    </ion-grid>
+    </div>
+    <div class="divBorder"></div>
+    <!---for text any text--->
+    <div class="divText">
+        <div class="contentTextDiv" [innerHTML]="showTextArrayHeaderVal"></div>
+        <div class="contentTextDiv" [innerHTML]="showTextArrayVal"></div>
+        <div class="contentTextDiv" [innerHTML]="showTextArrayFooterVal"></div>
+    </div>
+     <!---end for text any text--->
+    <!---input text any text--->
+    <div *ngIf="showInputArray==1" class="margin-top:10px;margin-bottom:10px;">
+      <div *ngFor="let items of showInputArrayVal;let i=index">
+        <div>
+          <ion-item lines="none">
+           <ion-input type="text" class="addLineInput" label="{{items.val}}" (ionInput)="functionAddVal($event,i,items.val)" labelPlacement="floating"></ion-input>
+          </ion-item>
+        </div>
+      </div>
+    </div>
+<!---add file text any text--->
+    <div class="margin_8 divAddFile" *ngIf="showAddFileArray==1">
+      <div class="largTextAddFile" (click)="uplodeFile(format)">
+        <div class="">
+          <img src="../../assets/images/File_dock_add.png">
+        </div>
+        <div class="">
+          <div style="font-size: 16px;font-weight: bold;">
+            Chooose File
+          </div>
+          <div style="font-size: 14px;margin-top: 3px;">
+            No File CHosen
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!---add file text any text--->
+    <div class="margin_8" *ngIf="showTextButtons==1">
+      <div style="margin:0px 15px;" *ngFor="let items of showButtonsArrayVal">
+        <div class="buttonDiv">
+          <ion-button mode="ios" class="selectButton">{{items.text}}</ion-button>
+        </div>
+      </div>
+    </div>
+    <div class="divBorderFooter"></div>
+    <div class="buttonDivData">
+      <ion-button mode="ios" (click)="addMsgTemp()" class="selectButtonAdd">{{add_number_butt}}</ion-button>
+    </div>
+</div>

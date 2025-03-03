@@ -1,0 +1,60 @@
+<ion-content [fullscreen]="true" (click)="functionCloseMenu()">
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <div>
+        <ion-grid style="padding:0px">
+          <ion-row style="padding:0px">
+              <ion-col class="colImage">
+                <div class="imageDiv">
+                  <span class="spanIcon"><ion-icon name="{{arrow_back}}" style="font-size: 25px;color: #214376;" (click)="functionBackHome()"></ion-icon></span>
+                  <img src="../../assets/images/logoImage.png" class="imageLogo">
+                  <div class="logoName">
+                    <div>Taqnyat</div>
+                    <div class="logoTitle">{{selectNumber}}</div>
+                  </div>
+                </div>
+              </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+    <div class="formLoginDiv">
+      <div #chatList class="chat-list scrollable-list" (scroll)="onScroll($event)">
+        <div *ngFor="let message of allMasseges">
+          <div class="{{chat_class_one}}" *ngIf="message.from == 0">
+            <div class="{{chat_class_tow}}">
+              <div [innerHTML]="message.msg"></div>
+              <div class="timeChatFirst">{{message.date}} {{message.time}}</div>
+            </div>
+          </div>
+          <div class="{{chat_class_three}}" *ngIf="message.from == 1">
+            <div class="{{chat_class_fore}}">
+              <div [innerHTML]="message.msg"></div>
+              <div class="timeChatLast">{{message.date}} {{message.time}} 
+                <ion-icon name="checkmark-outline" class="checkicons" *ngIf="message.msg_status == 'sent'"></ion-icon>
+                <ion-icon name="checkmark-done-outline" class="checkicons" *ngIf="message.msg_status == 'delivered'"></ion-icon>
+                <ion-icon name="checkmark-done-outline" class="checkiconsRead" *ngIf="message.msg_status == 'read'"></ion-icon>
+                <ion-icon name="information-circle-outline" class="checkiconsDenied" *ngIf="message.msg_status == 'failed'"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</ion-content>
+<ion-footer class="ion-no-border footer">
+  <ion-header class="ion-no-border footerPad">
+    <div>
+      <ion-item lines="none" class="{{chat_class_five}}">
+          <img src="../../assets/images/smile.png" class="{{chat_class_six}}" (click)="toggled = !toggled">
+          <ion-textarea [(ngModel)]="onMessage" placeholder="{{message_text}}" mode='ios' id="myTextarea" auto-grow="true" ></ion-textarea>
+          <img src="../../assets/images/links.png" class="smileRight" (click)="presentPopover($event)">
+      </ion-item>
+      <div class="{{chat_class_seven}}">
+        <div (click)="addMessage()"><img src="../../assets/images/{{send_image}}" class="imageLogo"></div>
+      </div>
+    </div>
+  </ion-header>
+  <emoji-picker class="light" (emoji-click)="functionSelectEmoji($event.detail)" *ngIf="toggled"></emoji-picker>
+</ion-footer>

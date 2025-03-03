@@ -1,0 +1,58 @@
+<ion-content [fullscreen]="true">
+  <div style="background-color: #ffffff;">
+    <ion-grid style="padding:0px" [ngStyle]="{'direction': dir}">
+      <ion-row style="padding:0px">
+          <ion-col style="text-align: center;padding: 0px;" size="4" (click)="selectItem(1)">
+            <div class="largDiv">
+              <div>
+                <img src="../../assets/images/document.png" class="adContactImage">
+              </div>
+              <div class="smallDiv">
+                {{document}}
+              </div>
+            </div>
+          </ion-col>
+          <ion-col style="text-align: center;padding: 0px;" size="4" (click)="selectItem(2)">
+            <div class="largDiv">
+              <div>
+                <img src="../../assets/images/image.png" class="adContactImage">
+              </div>
+              <div class="smallDiv">
+                {{image}}
+              </div>
+            </div>
+          </ion-col>
+          <ion-col style="text-align: center;padding: 0px;" size="4" (click)="selectItem(3)">
+            <div class="largDiv">
+              <div>
+                <img src="../../assets/images/audio.png" class="adContactImage">
+              </div>
+              <div class="smallDiv">
+                {{audio}}
+              </div>
+            </div>
+          </ion-col>
+          <ion-col style="text-align: center;padding: 0px;" size="4" (click)="selectItem(4)">
+            <div class="largDiv">
+              <div>
+                <img src="../../assets/images/template.png" class="adContactImage">
+              </div>
+              <div class="smallDiv">
+                {{template}}
+              </div>
+            </div>
+          </ion-col>
+          <ion-col style="text-align: center;padding: 0px;" size="4" (click)="selectItem(5)">
+            <div class="largDiv">
+              <div>
+                <img src="../../assets/images/fast_response.png" class="adContactImage">
+              </div>
+              <div class="smallDiv">
+                {{fast_response}}
+              </div>
+            </div>
+          </ion-col>
+      </ion-row>
+  </ion-grid>
+  </div>
+</ion-content>

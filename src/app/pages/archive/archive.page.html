@@ -1,0 +1,43 @@
+<ion-content [fullscreen]="true">
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <div>
+        <ion-grid style="padding:0px">
+          <ion-row style="padding:0px">
+              <ion-col class="colImage">
+                <div class="imageDiv">
+                  <span class="spanIcon"><ion-icon name="{{arrow_back}}" style="font-size: 25px;color: #214376;" (click)="functionBackHome(selectNumber,chatSessionIdAdd)"></ion-icon></span>
+                  <img src="../../assets/images/logoImage.png" class="imageLogo">
+                  <div class="logoName">
+                    <div>Taqnyat</div>
+                  </div>
+                </div>
+              </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+    <div class="formLoginDiv">
+      <div class="largDiv" *ngIf="chatVal==1">
+        <div>
+          <div class="infoDiv" *ngFor="let items of returnChatArray;let i=index">
+            <div [ngStyle]="{'float': floatD}"><img src="../../assets/images/logoImage.png" class="imageLogo"></div>
+              <div (click)="functionChats(selectNumber,chatSessionIdAdd,items.chatSessionId)">
+                <div class="diveNameInfo">
+                  <div class="divName">{{items.date}}</div>
+                  <div class="divNumber" *ngIf="items.badge!=0">{{items.chatSessionId}}</div>
+                  <div [ngClass]="{'numNewMsgRight': language=='ar', 'numNewMsgLeft': language!='ar'}">{{items.time}}</div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="chatVal==0" class="largDiv">
+        <div class="noDataDiv">
+          <div><img src="../../assets/images/noData.png" style="width: 30%;"></div>
+          <div class="noDataText">{{noExisting}}</div>
+        </div>
+      </div>
+    </div>
+</ion-content>

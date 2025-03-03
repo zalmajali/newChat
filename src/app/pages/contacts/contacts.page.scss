@@ -1,0 +1,117 @@
+ion-content{
+	--background:#EFF3F9 !important;
+	background:#EFF3F9 !important;
+	--keyboard-offset: 0 !important;
+    --overflow: hidden !important;
+}
+.title{
+    font-size: 19px; 
+    color:#214376;
+    font-weight: bold;
+}
+.spanIcon{
+    vertical-align: middle;
+}
+.formLoginDiv{
+	background: #ffffff;
+	height: 75%;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-top: 15px;
+}
+ion-item{
+    --background:#EFF3F9;
+    direction: ltr;
+}
+//form
+ion-button{
+	width: 65%;
+	--border-radius: 25px;
+	font-size: 16px;
+}
+.buttonDiv{
+	margin-top: 20px;
+	text-align: center;
+}
+.subTitle{
+    padding: 30px 5px 0px 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color:#214376
+}
+.subsubTitle{
+    padding: 20px 0px;
+    font-size: 20px;
+    font-weight: bold;
+    color:#214376
+}
+.inputDiv{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.pluseIcon{
+    font-size: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.viewIcon{
+    background-color: #F48022;
+    padding: 8px 19px;
+    border-radius: 50px;
+    font-size: 13px;
+    color: #ffffff;
+}
+.imageLogo{
+	width:55px;
+}
+.infoDiv{
+	margin: 4px 55px;
+    padding-left: 13px;
+    padding-right: 12px;
+}
+.divName{
+	padding-top: 5px;
+	font-size: 16px;
+    font-weight: bold;
+    color: #214376;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.divNumber{
+	padding-top: 10px;
+	font-size: 16px;
+    color: #777b81;
+    direction: ltr;
+}
+.iconViwe{
+    margin-top: 15px;
+}
+.underLine{
+    padding-top:10px;
+    border-bottom: 1px solid #a2b9da;
+}
+.largDiv{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.allDataDiv{
+    height: 495px;
+    overflow-y: auto;
+    padding-bottom: 35px;
+}
+.noDataDiv{
+    text-align: center;
+    margin-top: 50px;
+}
+.noDataText{
+    padding-top: 10px;
+    font-size: 13px;
+    color: #214376;
+}
+ion-input{
+    margin-left: 10px;
+    margin-right: 10px;
+}

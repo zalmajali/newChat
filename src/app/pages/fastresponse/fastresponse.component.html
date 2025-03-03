@@ -1,0 +1,10 @@
+<ion-content [fullscreen]="true">
+  <div>
+    <div class="margin_10" *ngFor="let items of returnFastResponseArray;let i=index">
+      <ion-item (click)="selectItem(items.description)">
+          <ion-label class="titleDiv">{{items.name}}</ion-label>
+          <ion-icon class="arrowIcon" name="{{arrow_go}}"></ion-icon>
+      </ion-item>
+    </div>
+  </div>
+</ion-content>

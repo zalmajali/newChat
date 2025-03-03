@@ -1,0 +1,250 @@
+//header
+ion-content{
+	--background:#EFF3F9 !important;
+	background:#EFF3F9 !important;
+	--keyboard-offset: 0 !important;
+    --overflow: hidden !important;
+}
+ion-toolbar{
+    background:#EFF3F9 !important;
+    --background:#EFF3F9 !important;
+}
+.imageLogo{
+	width:50px;
+}
+.imageDiv{
+	padding: 5px 5px 5px 10px;
+}
+.colImage{
+    padding:0px;
+    text-align: start;
+}
+.colIcon{
+    padding:0px;
+    text-align: end;
+}
+.logoName{
+    display: inline-block;
+    vertical-align: top;
+    padding: 15px 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #214376;
+}
+.divIcon{
+    padding: 8px 7px;
+}
+.searchIcon{
+    font-size: 25px;
+    color: #214376;
+}
+.formLoginDiv{
+	background: #ffffff;
+	height: 100%;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	padding-right: 15px;
+	padding-left: 15px;
+    overflow-y: auto;
+    padding-bottom: 175px;
+}
+.scrollHeader{
+    margin: 10px 10px 7px 10px;
+    text-align: center;
+    display: flex;
+}
+.buttomHeaser{
+    margin: 5px;
+    border:1px solid #8496b09c;
+    padding: 6px 5px;
+    border-radius: 50px;
+    color: #214376;
+    font-size: 14px;
+    font-weight: bold;
+    min-width: 100px;
+    text-align: center;
+}
+.selectedButtomHeaser{
+    background: #8496b09c;
+    border:0px solid #8496b09c;
+}
+//end header
+.inputDiv{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+ion-item{
+    --background:#EFF3F9;
+}
+.fade {
+  transition: opacity 0.5s ease-in-out, visibility 0.8s ease-in-out;
+}
+.hidden {
+    opacity: 0;
+    max-height: 0px;
+    visibility: hidden
+}
+.visible {
+    opacity: 1;
+    max-height: 100px;
+    visibility: visible
+}
+.iconSearch{
+    font-size: 28px;
+    color: #F48022;
+}
+ion-input{
+    min-height:0px !important
+}
+.infoDiv{
+    height: 75px;
+    padding-top: 11px;
+    border-radius: 5PX;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.infoDiv:active{
+    background: #EFF3F9;
+}
+.diveNameInfo{
+    padding-top: 5px;
+	font-size: 16px;
+    position: relative;
+}
+.divName{
+    font-weight: bold;
+    color: #214376;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 10px;
+    padding-left: 10px;
+    line-height: 19px;
+    font-size: 14px;
+}
+.divNumber{
+	padding-top: 5px;
+	font-size: 15px;
+    color: #8496B0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 20px;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+.largDiv{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.spanIconRight{
+    position: absolute;
+    top: 26px;
+    left:0px
+}
+.spanIconLeft{
+    position: absolute;
+    top: 26px;
+    right:0px
+}
+.iconGo{
+    font-size: 20px;
+    color: #8496B0;
+}
+.countMsg{
+    width: 22px;
+    height: 22px;
+    padding-top: 5px;
+    background-color: #F48022;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 100%;
+}
+.numNewMsgRight{
+    position: absolute;
+    top: 15px;
+    left:0px;
+    font-size: 12px;
+    color:#8496B0;
+    font-weight: bold;
+}
+.numNewMsgLeft{
+    position: absolute;
+    top: 15px;
+    right:0px;
+    font-size: 12px;
+    color:#8496B0;
+    font-weight: bold;
+}
+.timeMsgRight{
+    position: absolute;
+    top: 7px;
+    left:0px
+}
+.timeMsgLeft{
+    position: absolute;
+    top: 7px;
+    right:0px
+}
+.timeMsg{
+    color: #8496B0;
+    font-size: 12px;
+    font-weight: 600;
+}
+//footer
+.footer{
+    position:fixed;
+    bottom:0px;
+    background: #EFF3F9;
+    height: 65px;
+}
+.footerIcon{
+    padding-top: 5px;
+    font-size: 22px;
+    color: #F48022;
+}
+.footerIconUnselected{
+    padding-top: 5px;
+    font-size: 22px;
+    color: #214376;
+}
+.footerText{
+    font-size: 15px;
+    padding-bottom: 10px;
+    color: #214376;
+}
+.footerBorder{
+    border: 2px solid #F48022;
+}
+.addContactLeft{
+    position: fixed;
+    bottom: 90px;
+    left: 15px;
+}
+.addContactRight{
+    position: fixed;
+    bottom: 90px;
+    right: 15px;
+}
+.adContactImage{
+	width:60px;
+}
+.noDataDiv{
+    text-align: center;
+    margin-top: 150px;
+}
+.noDataText{
+    padding-top: 10px;
+    font-size: 13px;
+    color: #214376;
+}
+ion-input{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.spanIcon{
+    position: relative;
+    bottom: 11px;
+}

@@ -1,0 +1,57 @@
+ion-content{
+	--background:#EFF3F9 !important;
+	background:#EFF3F9 !important;
+	--keyboard-offset: 0 !important;
+}
+.signup{
+	text-align: end;
+	padding: 20px 10px 0px 10px;
+	font-size:15px;
+	font-weight: bold;
+	color: #214376;
+}
+.imageDiv{
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 25px;
+}
+.formLoginDiv{
+	background: #ffffff;
+	height: 85%;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+.loginDiv{
+	text-align: start;
+	font-size: 25px;
+	font-weight: bold;
+	color:#214376;
+	padding:25px 0px 10px 0px;
+}
+.imageLogo{
+	width:20%;
+}
+//form
+ion-button{
+	width: 65%;
+	--border-radius: 25px;
+	font-size: 16px;
+	font-weight: bold;
+}
+.buttonDiv{
+	margin-top: 50px;
+	text-align: center;
+}
+.contactUs{
+	padding:30px 15px 15px 5px;
+	color:#8496B0
+}
+.link{
+	color:#8496B0;
+	text-decoration: none;
+}
+.iconPass{
+	color:#8496B0;
+}

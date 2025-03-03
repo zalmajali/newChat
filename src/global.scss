@@ -1,0 +1,212 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import "@ionic/angular/css/palettes/dark.system.css";
+ion-input{
+    --color:#214376 !important;
+	--highlight-color-focused: #8496B0 !important;
+    --highlight-color-valid:none !important;
+    --highlight-color-invalid:none !important;
+}
+ion-item{
+	--border-color: #8496B0;
+	--padding-start:0px;
+    --background:#ffffff;
+	--inner-padding-end: 0px !important;
+}
+.label-text-wrapper{
+    color:#8496B0 !important;
+	line-height: 22px;
+}
+ion-button{
+	--background: #FF7901 !important;
+	--background-activated:#FF7901 !important;
+	--background-activated-opacity: #FF7901 !important;
+	--color-activated: #ffffff !important;
+	--ripple-color: #FF7901 !important;
+	min-height: 45px;
+	--color:#ffffff !important;
+	--background-focused:#8496B0 !important;
+	--background-hover:#8496B0 !important;
+	--border-radius:50px;
+}
+.ionItemStyleError{
+    --border-color: red !important;
+}
+.ionItemStyleSuccess{
+    --border-color: #214376 !important;
+}
+.errorMessage{
+	text-align: start;
+    padding-top: 5px;
+    font-size: 12px;
+    color: red;
+}
+.margin_10{
+	margin-top: 10px;
+}
+.margin_8{
+	margin-top: 8px;
+}
+.toastStyle{
+	--background: #F48022 !important;
+	--color: #ffffff;
+	--end:0px;
+	--start:0px;
+	--border-radius:0px;
+	--width:100%;
+	--max-width:100%;
+	--box-shadow:none;
+	font-size:12px;
+	text-align:center;
+	font-weight: bold;
+}
+.custom-spinner {
+    --background: #F48022;
+    --spinner-color: #ffffff;
+  }
+  .loading-wrapper{
+	padding-inline-start: 25px !important;
+	padding-inline-end: 12px !important;
+    padding-top: 23px !important;
+    padding-bottom: 21px !important;
+	border-radius: 10px !important;
+  }
+  ion-toggle{
+	--handle-background-checked:#F48022 !important;
+	--track-background-checked:#a2b9da !important;
+  }
+  .inputPhone .label-text-wrapper{
+    transform-origin: left top !important;
+}
+ion-radio{
+	padding-left: 20px;
+    direction: rtl;
+    padding-right: 20px;
+	background-color: #ffffff;
+	color: #a2b9da;
+	font-size: 18px;
+}
+ion-select{
+	padding-top: 10px !important;
+	color: #8496B0 !important;
+}
+ion-popover{
+	--max-height:27% !important;
+}
+
+.chat-boxsubortRight a {
+    color:#000000 !important;
+  }
+  .chat-boxUserRight a {
+    color:#ffffff !important;
+  }
+  .chat-boxsubortLeft a {
+    color:#000000 !important;
+  }
+  .chat-boxUserLeft a {
+    color:#ffffff !important;
+  }
+  .select-popover{
+	--height: 180px !important;
+    --width: 250px !important;
+    --offset-y: 1px;
+    --offset-x: 0px;
+    --background: #ffffff;
+    --backdrop-opacity: var(--ion-backdrop-opacity, 0.0);
+    --box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+    --max-height: 200px !important;
+  }
+  ion-popover{
+	--height:100%;
+	--width:95%;
+	--offset-y: -25px;
+	--offset-x: 3px;
+	--box-shadow:none;
+	--background:#ffffff;
+  }
+  .alertBac{
+	--background: #f48022;
+}
+.alert-message.sc-ion-alert-ios {
+  color: #ffffff;
+  font-size:17px;
+}
+.alert-button.sc-ion-alert-ios{
+	color: #ffffff;
+	font-weight:normal !important;
+	font-size: 17px;
+    padding-bottom: 10px;
+}
+.divIconpopover{
+	--height: 200px;
+	--width: 200px !important;
+	--offset-y: 1px;
+    --offset-x: -5px;
+	--background:#ffffff;
+	--backdrop-opacity: var(--ion-backdrop-opacity, 0.0);
+	--box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+	--max-height:200px !important;
+}
+  .my-custom-modal {
+	top: 75% !important;
+	--background:transparent;
+	--backdrop-opacity:0
+  }
+  .my-custom-modal-temp {
+	--background:transparent;
+	--box-shadow: none;
+  }
+.select-interface-option{
+	--border-color:#EFF3F9;
+	--background: #ffffff;
+}
+audio{
+	width: 235px;
+}
+video{
+	width: 200px;
+    height: 200px;
+}
+.waves-light{
+	background: #FF7901 !important;
+    min-height: 30px;
+    color: #ffffff !important;
+    border-radius: 10px;  
+	padding: 10px;
+	font-size: 15px;
+	min-height: 42px;
+  }

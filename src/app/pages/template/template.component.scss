@@ -1,0 +1,94 @@
+.formLoginDiv{
+    background: #ffffff;
+    overflow-y: auto;
+    position: relative;
+    top: 70px;
+    width: 85%;
+    margin: 0px auto;
+    text-align: center;
+    border-radius: 5px;
+}
+.titleDiv{
+    font-size: 17px;
+    font-weight: bold;
+    color: #214376;
+}
+.selectColTempName{
+    text-align: end;
+    position: relative;
+    top: -5px;
+}
+.divBorder{
+    border-top:2px solid #EFF3F9;
+}
+.divText{
+    border: 2px solid #EFF3F9;
+    margin: 10px;
+    border-radius: 10px;
+}
+.contentTextDiv{
+    text-align: justify;
+    line-height: 25px;
+    padding: 13px;
+    color: #214376;
+}
+.addLineInput {
+	border-bottom: 2px solid #EFF3F9;
+	margin-left: 10px;
+    margin-right: 10px;
+  }
+  .divAddFile{
+    background: #EFF3F9;
+    margin: 10px;
+    border-radius: 5px;
+    height: 100px;
+    border-style: dashed;
+    border-color: #214376;
+  }
+  .largTextAddFile{
+    height: 90px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: #214376;
+  }
+  .buttonDiv{
+	text-align: center;
+}
+.buttonDivData{
+    margin: 10px;
+	text-align: center;
+}
+ion-button{
+    width: 100%;
+    --border-radius: 20px;
+    font-size: 16px;
+}
+.selectButton{
+    --background: #214376 !important;
+	--background-activated:#214376 !important;
+	--background-activated-opacity: #214376 !important;
+	--color-activated: #ffffff !important;
+	--ripple-color: #214376 !important;
+	min-height: 45px;
+	--color:#ffffff !important;
+	--background-focused:#8496B0 !important;
+	--background-hover:#8496B0 !important;
+	--border-radius:50px;
+}
+.selectButtonAdd{
+    --background: #FF7901 !important;
+	--background-activated:#FF7901 !important;
+	--background-activated-opacity: #FF7901 !important;
+	--color-activated: #ffffff !important;
+	--ripple-color: #FF7901 !important;
+	min-height: 30px;
+	--color:#ffffff !important;
+	--background-focused:#8496B0 !important;
+	--background-hover:#8496B0 !important;
+	--border-radius:50px;
+}
+.divBorderFooter{
+    padding-top: 10px;
+    border-top:2px solid #EFF3F9;
+}

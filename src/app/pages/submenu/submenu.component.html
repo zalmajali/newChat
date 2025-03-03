@@ -1,0 +1,38 @@
+<ion-content [fullscreen]="true" (click)="functionClosePage()">
+  <div style="display: flex; flex-direction: column;">
+    <div class="formLoginDiv">
+      <div class="largDiv">
+        <div class="infoDiv" *ngIf="type==1" style="min-height: 200px;">
+            <ion-item class="hidColor" lines="none" *ngFor="let items of returnTeamArray;let i=index">
+              <ion-icon name="person-outline" class="teamNameIcon"></ion-icon> 
+              <ion-label (click)="functionAssignTo(items.userName,1,number)" class="teamNameDiv">{{items.userName}}</ion-label>
+              <ion-icon (click)="functionAssignTo(items.userName,1,number)" class="statusGreenIcon" *ngIf="items.online == 1" name="radio-button-on-outline"></ion-icon>
+              <ion-icon (click)="functionAssignTo(items.userName,1,number)" class="statusRedIcon" *ngIf="items.online == 2" name="radio-button-on-outline"></ion-icon>
+            </ion-item>  
+            <ion-item class="hidColor" lines="none" *ngFor="let items of returnDepartArray;let i=index">
+              <ion-icon name="people-outline" class="teamNameIcon"></ion-icon> 
+              <ion-label (click)="functionAssignTo(i,2,number)" class="teamNameDiv">{{items.userName}}</ion-label>
+              <ion-icon (click)="functionAssignTo(i,2,number)" class="statusblouIcon" name="radio-button-off-outline"></ion-icon>
+            </ion-item>           
+        </div>
+        <div class="infoDiv" *ngIf="type==2" style="min-height: 200px;">
+          <ion-item class="hidColor" lines="none">
+            <ion-icon name="checkmark-done" class="teamNameIcon"></ion-icon> 
+            <ion-label (click)="functionCloseTo(1,number)" class="teamNameDiv">{{solved}}</ion-label>
+            <ion-icon (click)="functionCloseTo(1,number)" class="statusblouIcon" name="radio-button-off-outline"></ion-icon>
+          </ion-item>
+          <ion-item class="hidColor" lines="none">
+            <ion-icon name="ticket" class="teamNameIcon"></ion-icon> 
+            <ion-label (click)="functionCloseTo(2,number)" class="teamNameDiv">{{move_to_ticket}}</ion-label>
+            <ion-icon (click)="functionCloseTo(2,number)" class="statusblouIcon" name="radio-button-off-outline"></ion-icon>
+          </ion-item>      
+          <ion-item class="hidColor" lines="none">
+            <ion-icon name="flash-off" class="teamNameIcon"></ion-icon> 
+            <ion-label (click)="functionCloseTo(3,number)" class="teamNameDiv">{{lost_connection}}</ion-label>
+            <ion-icon (click)="functionCloseTo(3,number)" class="statusblouIcon" name="radio-button-off-outline"></ion-icon>
+          </ion-item>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
