@@ -170,9 +170,7 @@ public dbInstance!: SQLiteObject;
     });
   }
   playAudio() {
-     alert(JSON.stringify(this.mediaFile));
     if (!this.mediaFile) {
-      alert('https://dev.taqnyat.sa/my-sound.mp3');
       this.mediaFile = this.mediaPlugin.create('https://dev.taqnyat.sa/my-sound.mp3');
       this.mediaFile.onStatusUpdate.subscribe(status => console.log('حالة الصوت:', status));
     }
@@ -188,7 +186,6 @@ public dbInstance!: SQLiteObject;
   }
 
   stopAudio() {
-     alert(JSON.stringify(this.mediaFile));
     if (this.mediaFile) {
       this.mediaFile.stop();
       this.mediaFile.release();
@@ -198,7 +195,6 @@ public dbInstance!: SQLiteObject;
   }
 
   updateProgressBar() {
-     alert(JSON.stringify(this.mediaFile));
     if (!this.mediaFile) return;
   
     let duration = this.mediaFile.getDuration();
@@ -207,7 +203,6 @@ public dbInstance!: SQLiteObject;
     }
   
     this.updateInterval = setInterval(() => {
-       alert(JSON.stringify(this.mediaFile));
       if (this.mediaFile) {
         this.mediaFile.getCurrentPosition().then((position: number) => { // ✅ استخدام then()
           if (position !== undefined && position >= 0) {
