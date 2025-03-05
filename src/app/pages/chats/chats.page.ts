@@ -31,7 +31,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 `
 })
 export class ChatsPage implements OnInit {
-  audioUrl: string = 'https://dev.taqnyat.sa/testmpz.ogg';
+  audioUrl: string = 'https://dev.taqnyat.sa/123.opus';
 
   constructor(private sanitizer: DomSanitizer,private transfer: FileTransfer,private camera: Camera,private http: HttpClient,private chooser: Chooser,private popoverCtrl: PopoverController,private file: File,private activaterouter : ActivatedRoute,private databaseService: DatabaseService,private router: Router,private chatService: ChatService,private globalization: Globalization, private translate: TranslateService,private modalController: ModalController,private network:Network,private menu:MenuController,private storage: Storage,private platform: Platform,private navCtrl: NavController,private toastCtrl: ToastController,private loading: LoadingController) {
     this.platform.backButton.subscribeWithPriority(10, () => {
