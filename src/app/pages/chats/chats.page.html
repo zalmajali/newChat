@@ -1,19 +1,4 @@
-<ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>مشغل الصوت</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-button expand="full" (click)="playAudio()">تشغيل</ion-button>
-      <ion-button expand="full" (click)="pauseAudio()">إيقاف مؤقت</ion-button>
-      <ion-button expand="full" (click)="stopAudio()">إيقاف</ion-button>
-
-      <ion-item>
-        <ion-range min="0" [max]="audioDuration" [(ngModel)]="audioPosition" (ionChange)="seekAudio($event)">
-          <ion-label slot="start">{{ formatTime(audioPosition) }}</ion-label>
-          <ion-label slot="end">{{ formatTime(audioDuration) }}</ion-label>
-        </ion-range>
-      </ion-item>
-    </ion-card-content>
-  </ion-card>
+<ion-content [fullscreen]="true">
+  <audio #audio controls playsinline></audio>
+  <button (click)="playAudio()">تشغيل الصوت</button>
 </ion-content>
